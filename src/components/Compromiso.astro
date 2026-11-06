@@ -1,0 +1,48 @@
+---
+/* 99.9 · Compromiso social (dark, entre dos secciones claras) */
+const bloques = [
+  {
+    title: "Campañas con sentido social",
+    items: ["Día del Maíz", "Día de la eliminación de la violencia contra la mujer · 8M", "Día de la Radio Universitaria en América Latina"],
+  },
+  {
+    title: "Ciudadanía activa",
+    items: ["Cobertura colaborativa de procesos democráticos", "Análisis de políticas públicas desde múltiples perspectivas", "Educación cívica en comunidades universitarias"],
+  },
+  {
+    title: "Formación continua",
+    items: ["Talleres técnicos replicados en toda la red en el encuentro virtual 2026", "<b>Verificado MX</b>"],
+    bold: true,
+  },
+];
+---
+
+<section class="section-pad bg-ink-1" id="compromiso" data-freq="99.9" data-name="Compromiso Social">
+  <div class="container-rrum">
+    <header class="mb-14 max-w-[760px]">
+      <p class="mb-3.5 font-head text-[12.5px] font-medium uppercase tracking-[.24em] text-orange reveal"><i class="fa-solid fa-radio mr-2.5 text-[10px]"></i>99.9 · Compromiso social</p>
+      <h2 class="mb-4 font-head text-[clamp(30px,4.4vw,52px)] font-bold leading-tight text-white reveal">
+        Amplificamos las voces<br />que <span class="text-orange">necesita</span> México
+      </h2>
+    </header>
+
+    <div class="grid gap-5 md:grid-cols-3">
+      {bloques.map((b) => (
+        <article class="reveal rounded-2xl border border-ink-line border-t-[3px] border-t-orange bg-ink-2 p-8 transition duration-300 hover:-translate-y-1 hover:border-cool-1 hover:shadow-[0_20px_40px_rgba(0,0,0,.35)]">
+          <h3 class="mb-3 mt-1 font-head text-[clamp(19px,2.2vw,24px)] font-bold text-white">{b.title}</h3>
+          <ul>
+            {b.items.map((it) => (
+              <li class="border-b border-white/10 py-2.5 pl-5 text-[15.5px] text-cool-2 last:border-0 relative before:absolute before:left-0 before:text-orange before:font-bold before:content-['›'] [&_b]:text-orange" set:html={it} />
+            ))}
+          </ul>
+        </article>
+      ))}
+    </div>
+
+    <p class="mt-14 max-w-[900px] font-head text-[clamp(21px,3vw,30px)] font-medium leading-[1.4] text-white reveal">
+      «Cuando más de 40 instituciones que hacen radio hablan de lo mismo, México
+      escucha diferente. No solo informamos sobre estos temas: <em class="not-italic border-b-[3px] border-orange">los amplificamos
+      hasta convertirlos en conversaciones nacionales</em>.»
+    </p>
+  </div>
+</section>

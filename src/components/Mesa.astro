@@ -1,0 +1,31 @@
+---
+/* 105.3 · Mesa directiva (fondo blanco) */
+import { mesa } from "../data/mesa.js";
+---
+
+<section class="section-pad bg-white" id="mesa-directiva" data-freq="105.3" data-name="Mesa Directiva">
+  <div class="container-rrum">
+    <header class="mb-14 max-w-[760px]">
+      <p class="mb-3.5 font-head text-[12.5px] font-medium uppercase tracking-[.24em] text-orange reveal"><i class="fa-solid fa-radio mr-2.5 text-[10px]"></i>105.3 · Quiénes sostienen la señal</p>
+      <h2 class="mb-4 font-head text-[clamp(30px,4.4vw,52px)] font-bold leading-tight text-ink-1 reveal">Mesa directiva <span class="text-orange">2025–2026</span></h2>
+      <p class="max-w-[640px] text-[19px] text-[#6b6a66] reveal">Horizontalidad cero jerarquías: la mesa coordina a la red, no la dirige. Radios de todo el país tomando decisiones juntas.</p>
+    </header>
+
+    <div class="grid gap-6 [grid-template-columns:repeat(auto-fit,minmax(255px,1fr))]">
+      {mesa.map((m) => (
+        <article class="reveal rounded-2xl border border-[#ece9e2] bg-cream px-7 pb-8 pt-10 text-center transition duration-300 hover:-translate-y-1.5 hover:border-orange hover:shadow-[0_20px_40px_rgba(23,23,26,.08)]">
+          <img
+            class="mx-auto mb-5 h-32 w-32 rounded-full border-[3px] border-white object-cover shadow-[0_0_0_2px_var(--color-orange),0_8px_22px_rgba(23,23,26,.12)]"
+            src={m.img}
+            alt={m.name}
+            width="128" height="128"
+            loading="lazy"
+          />
+          <h3 class="mb-1.5 font-head text-[18.5px] font-bold text-ink-1">{m.name}</h3>
+          <p class="mb-2.5 font-head text-[12.5px] font-semibold uppercase tracking-[.1em] text-orange-deep">{m.role}</p>
+          <p class="text-[13.5px] leading-normal text-[#6b6a63]">{m.station}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

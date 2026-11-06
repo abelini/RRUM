@@ -1,0 +1,30 @@
+---
+/* 94.7 · Modelo de resonancia, 4 pasos (dark) */
+const pasos = [
+  ["01", "Compartimos contenidos", "Producciones radiofónicas que viajan por toda la red. Cápsulas, reportajes y entrevistas disponibles para todas las radios."],
+  ["02", "Intercambiamos saberes", "Capacitaciones técnicas entre equipos. Metodologías probadas y mejoradas colectivamente."],
+  ["03", "Co-creamos proyectos", "Cadenas radiofónicas nacionales simultáneas. Coberturas colaborativas de eventos de interés público."],
+  ["04", "Beneficiamos audiencias", "Acceso a perspectivas diversas. Calidad ampliada por la colaboración en una sola frecuencia."],
+];
+---
+
+<section class="section-pad bg-ink-1" id="modelo" data-freq="94.7" data-name="El Modelo">
+  <div class="container-rrum">
+    <header class="mb-14 max-w-[760px]">
+      <p class="mb-3.5 font-head text-[12.5px] font-medium uppercase tracking-[.24em] text-orange reveal"><i class="fa-solid fa-radio mr-2.5 text-[10px]"></i>94.7 · Cómo funciona</p>
+      <h2 class="mb-4 font-head text-[clamp(30px,4.4vw,52px)] font-bold leading-tight text-white reveal">El modelo de resonancia, <span class="text-orange">paso a paso</span></h2>
+      <p class="max-w-[640px] text-[19px] text-cool-1 reveal">Cuatro movimientos que convierten contenido compartido en impacto colectivo.</p>
+    </header>
+
+    <ol class="relative grid gap-10 max-md:grid-cols-1 md:grid-cols-4">
+      <span class="pointer-events-none absolute top-[26px] left-[6%] right-[4%] hidden h-0.5 opacity-50 md:block" style="background-image:repeating-linear-gradient(90deg, var(--color-orange) 0 14px, transparent 14px 24px)" aria-hidden="true"></span>
+      {pasos.map(([n, t, d]) => (
+        <li class="reveal">
+          <span class="relative z-[1] mb-6 inline-flex h-[52px] w-[52px] items-center justify-center rounded-full border-2 border-orange bg-ink-1 font-head font-bold text-orange">{n}</span>
+          <h3 class="mb-2.5 font-head text-xl font-bold text-white">{t}</h3>
+          <p class="text-[15px] leading-relaxed text-cool-1">{d}</p>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>

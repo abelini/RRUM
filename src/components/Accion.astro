@@ -1,0 +1,45 @@
+---
+/* 96.9 · Red en acción (light) */
+const cases = [
+  {
+    tag: "CADENAS", title: "Cadenas que conectan",
+    body: "<b>Día Mundial de la Radio:</b> más de 40 instituciones que hacemos radio, una sola voz por el medio ambiente. <b>Semillas de trascendencia:</b> usos y costumbres del Día de Muertos, en simultáneo nacional.",
+    wave: "M0 30 Q 12.5 8, 25 30 T 50 30 T 75 30 T 100 30 T 125 30 T 150 30 T 175 30 T 200 30",
+  },
+  {
+    tag: "TALENTO", title: "Talento que proyectamos",
+    body: "<b>Convocatoria Nómada:</b> 3 ediciones impulsando músicos universitarios emergentes con alcance nacional e internacional.",
+    wave: "M0 30 Q 10 4, 20 30 T 40 30 T 60 30 T 80 30 T 100 30 T 120 30 T 140 30 T 160 30 T 180 30 T 200 30",
+  },
+  {
+    tag: "ENCUENTROS", title: "Encuentros que transforman",
+    body: "<b>120 participantes de 10 países</b> intercambiando saberes. Una comunidad profesional que crece junta en cada reunión.",
+    wave: "M0 30 Q 15 10, 30 30 T 60 30 T 90 30 T 120 30 T 150 30 T 180 30 T 200 30",
+  },
+];
+---
+
+<section class="section-pad bg-cream text-[#3d3d42]" id="accion" data-freq="96.9" data-name="Red en acción">
+  <div class="container-rrum">
+    <header class="mb-14 max-w-[760px]">
+      <p class="mb-3.5 font-head text-[12.5px] font-medium uppercase tracking-[.24em] text-orange reveal"><i class="fa-solid fa-radio mr-2.5 text-[10px]"></i>96.9 · Evidencias</p>
+      <h2 class="mb-4 font-head text-[clamp(30px,4.4vw,52px)] font-bold leading-tight text-ink-1 reveal">Nuestra red <span class="text-orange">en acción</span></h2>
+      <p class="max-w-[640px] text-[19px] text-[#6b6a66] reveal">Cuando las ideas resuenan, se transforman en movimientos que conectan todo México.</p>
+    </header>
+
+    <div class="grid gap-5 md:grid-cols-3">
+      {cases.map((c) => (
+        <article class="reveal overflow-hidden rounded-2xl border border-linen bg-white transition duration-300 hover:-translate-y-1.5 hover:border-orange hover:shadow-[0_22px_44px_rgba(23,23,26,.09)]">
+          <div class="relative m-0 flex h-[110px] items-center justify-center bg-ink-1 px-6">
+            <svg viewBox="0 0 200 60" preserveAspectRatio="none" class="relative top-1.5 h-[60px] w-full text-orange" aria-hidden="true"><path d={c.wave} fill="none" stroke="currentColor" stroke-width="3"/></svg>
+            <span class="absolute left-6 top-4 font-head text-[11px] tracking-[.24em] text-cool-1">{c.tag}</span>
+          </div>
+          <div class="px-7 pb-8 pt-0">
+            <h3 class="mb-2 mt-0 font-head text-[21px] font-bold text-ink-1">{c.title}</h3>
+            <p class="text-[15.5px] text-[#5c5b57]" set:html={c.body} />
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

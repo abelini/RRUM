@@ -1,0 +1,50 @@
+---
+/* Hero: pantalla completa, waves reactivas al cursor (main.js) */
+---
+
+<section class="relative flex min-h-svh flex-col justify-center overflow-hidden bg-ink-0 px-0 pt-[116px] pb-16" id="inicio" data-freq="87.9" data-name="Señal RRUM">
+  <canvas class="absolute inset-0 z-0 h-full w-full opacity-90" id="heroCanvas" aria-hidden="true"></canvas>
+  <div class="hero-grid-lines" aria-hidden="true"></div>
+
+  <div class="container-rrum relative z-[2]">
+    <h1 class="mb-6 max-w-[14ch] font-head text-[clamp(42px,7.2vw,92px)] font-bold leading-none tracking-[-0.03em] text-white">
+      Resonamos ideas,<br />
+      <span class="text-orange">amplificamos</span> el futuro<span class="animate-blink text-orange">_</span>
+    </h1>
+    <p class="max-w-[640px] text-[clamp(17px,1.6vw,20px)] text-cool-2">
+      Cuando una idea se comparte entre nuestras <b class="text-white">41 radios afiliadas</b>,
+      no se replica: se amplifica. Como ondas sonoras que crean interferencia
+      constructiva, generamos un efecto multiplicador que transforma el
+      panorama comunicacional de México.
+    </p>
+    <div class="mt-9">
+      <a class="rounded-full bg-orange px-8 py-4 font-head text-base font-medium text-ink-0 transition hover:-translate-y-0.5 hover:bg-orange-deep hover:text-white" href="#resonancia">Conoce la red</a>
+    </div>
+  </div>
+
+  <div class="container-rrum relative z-[2] mt-16">
+    <!-- señal decorativa: línea de onda estática con mezcla de colores -->
+    <svg viewBox="0 0 1124 60" preserveAspectRatio="none" class="h-12 w-full opacity-70" aria-hidden="true">
+      <path d="M0 30 Q 18 8, 36 30 T 72 30 T 108 30 T 144 30 T 180 30 T 216 30 T 252 30 T 288 30 T 324 30 T 360 30 T 396 30 T 432 30 T 468 30 T 504 30 T 540 30 T 576 30 T 612 30 T 648 30 T 684 30 T 720 30 T 756 30 T 792 30 T 828 30 T 864 30 T 900 30 T 936 30 T 972 30 T 1008 30 T 1044 30 T 1080 30 T 1116 30 T 1124 30" fill="none" stroke="url(#waveMix)" stroke-width="2.5"/>
+      <defs>
+        <linearGradient id="waveMix" x1="0" x2="1">
+          <stop offset="0" stop-color="#ff5a1f"/>
+          <stop offset=".5" stop-color="#2fd1c2"/>
+          <stop offset="1" stop-color="#ff5a1f"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <!-- Franja de metadatos -->
+  <div class="relative z-[2] mt-14">
+    <div class="container-rrum flex flex-wrap items-center gap-9 border-t border-white/8 pt-5 pb-5 font-head text-[12.5px] tracking-[.16em] text-cool-1">
+      <span class="inline-flex items-center gap-2 text-teal">
+        <i class="inline-block h-2 w-2 rounded-full bg-teal"></i>RED · 41 ESTACIONES
+      </span>
+      <span>87.9 — 108.0 MHz</span>
+      <span>una sola frecuencia · mil historias</span>
+      <span>México, 2026</span>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+---
+import { radios } from "../data/radios.js";
+const highlights = [
+  "Día Mundial de la Radio — más de 40 instituciones, una sola voz por el medio ambiente",
+  "Convocatoria Nómada: 3 ediciones impulsando músicos universitarios emergentes",
+  "Encuentro Anual: 120 participantes de 10 países intercambiando saberes",
+  "Verificado MX — cuando la red habla de lo mismo, México escucha diferente",
+];
+const static_items = [...highlights, ...highlights];
+---
+
+<!-- Ticker: por defecto muestra los highlights del PDF cuando la API
+     de WP responde, main.js reemplaza #tickerLive con últimos posts -->
+<div class="overflow-hidden border-y border-ink-line bg-ink-2 py-3 text-orange" aria-hidden="true">
+  <div class="ticker-track font-head text-[13.5px] font-medium tracking-[.06em]">
+    <div id="tickerLive" style="display:none"></div>
+    <div id="tickerStatic" class="contents">
+      {static_items.map((t) => (
+        <>
+          <span>{t}</span>
+          <i class="text-[9px] opacity-65">◆</i>
+        </>
+      ))}
+    </div>
+  </div>
+</div>

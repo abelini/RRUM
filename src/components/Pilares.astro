@@ -1,0 +1,41 @@
+---
+/* 91.5 · Pilares 2026 + stats (light) */
+const pilares = [
+  ["P1", "Resonancia", "«En la RRUM, tu contenido viaja. Tu conocimiento se expande. Tu impacto se multiplica.»"],
+  ["P2", "Intercambio", "«Hoy compartes una cápsula, mañana recibes una técnica. Siempre ganas, siempre creces.»"],
+  ["P3", "Beneficio", "«Más voces, más perspectivas, más México en cada frecuencia.»"],
+  ["P4", "Futuro", "«No solo hacemos radio hoy. Formamos a quienes la transformarán mañana.»"],
+];
+const stats = [
+  { count: "41", label: "radios afiliadas resonando" },
+  { count: "40", prefix: "+", label: "instituciones que hacen radio" },
+  { count: "120", label: "participantes en el Encuentro" },
+  { count: "10", label: "países conectados por la red" },
+];
+---
+
+<section class="section-pad bg-cream text-[#3d3d42]" id="pilares" data-freq="91.5" data-name="Pilares 2026">
+  <div class="container-rrum">
+    <header class="mb-14 max-w-[760px]">
+      <p class="mb-3.5 font-head text-[12.5px] font-medium uppercase tracking-[.24em] text-orange reveal"><i class="fa-solid fa-radio mr-2.5 text-[10px]"></i>91.5 · Arquitectura estratégica</p>
+      <h2 class="mb-4 font-head text-[clamp(30px,4.4vw,52px)] font-bold leading-tight text-ink-1 reveal">Cuatro pilares de comunicación <span class="text-orange">2026</span></h2>
+    </header>
+
+    <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+      {pilares.map(([n, t, q]) => (
+        <article class="reveal rounded-2xl border border-linen bg-white p-7 transition duration-300 hover:-translate-y-1.5 hover:border-orange hover:shadow-[0_22px_44px_rgba(23,23,26,.09)]">
+          <h3 class="mb-2 font-head text-[clamp(19px,2.2vw,24px)] font-bold text-ink-1">{t}</h3>
+          <p class="text-base text-[#5c5b57]">{q}</p>
+        </article>
+      ))}
+    </div>
+
+    <div class="mt-16 grid grid-cols-2 gap-5 rounded-2xl bg-ink-1 px-5 py-11 lg:grid-cols-4">
+      {stats.map((s, i) => (
+        <div class={"py-2 px-3 text-center max-lg:[&:nth-child(odd)]:border-l-0" + (i ? " lg:border-l lg:border-white/8" : "")}>
+          <b class="block font-head text-[clamp(38px,4.6vw,58px)] font-bold leading-none text-orange tabular-nums" data-count={s.count} data-prefix={s.prefix ?? ""}>0</b>
+          <span class="mt-2.5 block text-sm text-cool-2">{s.label}</span></div>
+      ))}
+    </div>
+  </div>
+</section>

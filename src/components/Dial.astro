@@ -1,0 +1,33 @@
+---
+/* Dial de sintonía · dos variantes:
+   - Desktop ≥1024px: receptor FM flotante a la derecha (.dial-v)
+   - Móvil/tablet <1024px: pastilla compacta abajo-izquierda (.dial)
+   main.js actualiza ambas; el CSS limita cada una a su rango. */
+---
+
+<!-- Desktop: receptor FM flotante pegado al lado derecho -->
+<aside class="dial-v hidden lg:flex" aria-hidden="true">
+  <div class="dial-v-head">
+    <b class="dial-freq tuned" data-dial-freq>87.9</b>
+    <span class="dial-v-unit">FM · MHz</span>
+  </div>
+  <div class="dial-v-track" id="dialVTrack">
+    <div id="dialVScale"></div>
+    <div class="dial-needle-v" id="dialNeedleV" style="transform:translateY(0)"></div>
+  </div>
+  <div class="dial-v-name" data-dial-name>Señal RRUM</div>
+</aside>
+
+<!-- Móvil/tablet (<1024px): pastilla compacta abajo-izquierda -->
+<aside class="dial lg:hidden" aria-hidden="true">
+  <div class="dial-power text-orange font-head tracking-[.2em]"><i></i><span>RRUM</span></div>
+  <div class="dial-readout">
+    <b class="dial-freq tuned" data-dial-freq>87.9</b>
+    <span class="dial-mhz">FM · MHz</span>
+    <span class="dial-name" data-dial-name>Señal RRUM</span>
+  </div>
+  <div class="dial-track">
+    <div class="dial-scale" id="dialScale"></div>
+    <div class="dial-needle" id="dialNeedle" style="transform:translateX(0)"></div>
+  </div>
+</aside>

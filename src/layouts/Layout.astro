@@ -1,0 +1,33 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/png" href="/img/favicon-rrum.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&family=Chakra+Petch:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#17171a" />
+    <!-- Font Awesome (webfont) -->
+    <script src="https://kit.fontawesome.com/43ec8f41e0.js" crossorigin="anonymous"></script>
+  </head>
+  <body id="top" class="bg-ink-1 font-body text-cool-2 antialiased">
+    <slot />
+    <script> import "../scripts/main.js"; </script>
+  </body>
+</html>

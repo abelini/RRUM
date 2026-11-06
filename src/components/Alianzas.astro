@@ -1,0 +1,47 @@
+---
+/* 106.9 · Alianzas estratégicas (dark, al final del recorrido) */
+const grupos = [
+  {
+    band: "Band · 1", title: "Nacional",
+    items: ["AMARC México", "Red México", "Radio Educación", "ILCE", "CFT", "IMER", "SPR", "DGDC UNAM", "Fonoteca Nacional"],
+  },
+  {
+    band: "Band · 2", title: "Internacional",
+    items: ["RFI · Radio Francia Internacional", "RIU · Red Internacional Universitaria", "RRUC · Red de Radio Universitaria de Colombia"],
+  },
+  {
+    band: "Band · 3", title: "Institucional",
+    items: ["Cámara de Diputados y Senado", "Bienal Internacional de Radio", "Comisión Nacional de Salud Mental"],
+  },
+];
+---
+
+<section class="section-pad bg-ink-1" id="alianzas" data-freq="106.9" data-name="Alianzas">
+  <div class="container-rrum">
+    <header class="mb-14 max-w-[760px]">
+      <p class="mb-3.5 font-head text-[12.5px] font-medium uppercase tracking-[.24em] text-orange reveal"><i class="fa-solid fa-radio mr-2.5 text-[10px]"></i>106.9 · Conectados localmente, resonando globalmente</p>
+      <h2 class="mb-4 font-head text-[clamp(30px,4.4vw,52px)] font-bold leading-tight text-white reveal">Alianzas <span class="text-orange">estratégicas</span></h2>
+      <p class="max-w-[640px] text-[19px] text-cool-1 reveal">Cada alianza amplifica nuestra capacidad de intercambio, aprendizaje e impacto.</p>
+    </header>
+
+    <div class="grid gap-7 md:grid-cols-3">
+      {grupos.map((g) => (
+        <div class="reveal rounded-2xl border border-ink-line bg-ink-2 p-8 transition duration-300 hover:-translate-y-1 hover:border-orange">
+          <h3 class="mb-5 flex flex-col gap-1.5 border-b-2 border-orange pb-4 font-head font-bold text-white">
+            <span class="font-head text-[11px] tracking-[.26em] text-cool-1">{g.band}</span>
+            {g.title}
+          </h3>
+          <ul>
+            {g.items.map((it) => (
+              <li class="relative border-b border-dashed border-white/8 py-2.5 pl-5 text-[15.5px] text-cool-2 last:border-0 before:absolute before:left-0 before:content-['—'] before:text-orange">{it}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <p class="mx-auto mt-12 max-w-[760px] text-center font-head text-[clamp(17px,2vw,21px)] text-cool-2 reveal">
+      Resonar solo no es suficiente: hay que resonar con quienes construyen el futuro de la comunicación.
+    </p>
+  </div>
+</section>

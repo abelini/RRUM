@@ -1,0 +1,31 @@
+# ═══════════════════════════════════════════════════════════════
+# RRUM — deploy estático
+# Subir este archivo a la RAÍZ de rrum.mx (junto a index.html del
+# public/ de dist). WordPress remanente NO se toca: solo cambia qué
+# gana la raíz del dominio (el landing en HTML plano, el resto de
+# URLs de WP siguen sirviendo por sus rewrite rules originales).
+#
+# ⚠️ Antes de subir: respaldar el .htaccess actual del hosting y
+#    verificar que no exista ya un index.html en la raíz.
+# ═══════════════════════════════════════════════════════════════
+
+# El landing estático gana la raíz del dominio.
+DirectoryIndex index.html index.php
+
+# Cache largo para assets con hash del build (Astro genera/_astro/*.hash.ext)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/png "access plus 6 months"
+  ExpiresByType image/jpeg "access plus 6 months"
+  ExpiresByType image/webp "access plus 6 months"
+  ExpiresByType image/svg+xml "access plus 6 months"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+</IfModule>
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml
+</IfModule>
+
+# MUY IMPORTANTE: conservar las reglas de WordPress que ya existan en
+# el hosting (bloque BEGIN/END WordPress). Al integrar este archivo,
+# pegar el bloque WP intacto debajo de DirectoryIndex.

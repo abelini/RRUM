@@ -1,0 +1,38 @@
+---
+const navLinks = [
+  { href: "#resonancia", label: "Resonancia" },
+  { href: "#modelo", label: "Modelo" },
+  { href: "#accion", label: "Red en acción" },
+  { href: "#desde-la-red", label: "Noticias" },
+  { href: "#radios", label: "Radios" },
+  { href: "#mesa-directiva", label: "Mesa Directiva" },
+  { href: "#alianzas", label: "Alianzas" },
+];
+---
+
+<header class="fixed inset-x-0 top-0 z-[60] h-[76px] border-b border-white/5 bg-ink-0/80 backdrop-blur-xl">
+  <div class="container-rrum flex h-full items-center gap-8">
+    <a class="flex items-center" href="#top" aria-label="RRUM — inicio">
+      <img src="/img/logo-rrum.png" alt="Red de Radios Universitarias de México" class="h-[34px] w-auto" width="160" height="52" />
+    </a>
+
+    <nav id="mainNav" class="mr-auto flex-col gap-0 lg:flex lg:flex-row lg:items-center lg:gap-6" aria-label="Principal">
+      {navLinks.map((l) => (
+        <a class="text-[14.5px] font-medium text-cool-2 transition hover:text-orange" href={l.href}>{l.label}</a>
+      ))}
+    </nav>
+
+    <a
+      class="rounded-full bg-orange px-6 py-3 font-head text-[15px] font-medium text-ink-0 transition hover:-translate-y-0.5 hover:bg-orange-deep hover:text-white max-lg:hidden"
+      href="#unete"
+    >
+      Únete a la red
+    </a>
+
+    <button class="ml-auto p-2 max-lg:!ml-0 lg:hidden" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span class="block h-0.5 w-6 bg-white"></span>
+      <span class="my-1 block h-0.5 w-6 bg-white"></span>
+      <span class="block h-0.5 w-6 bg-white"></span>
+    </button>
+  </div>
+</header>

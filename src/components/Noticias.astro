@@ -1,0 +1,31 @@
+<section class="section-pad bg-cream-2" id="desde-la-red" data-freq="98.3" data-name="Desde la red">
+  <div class="container-rrum">
+    <header class="mb-14 max-w-[760px]">
+      <p class="mb-3.5 font-head text-[12.5px] font-medium uppercase tracking-[.24em] text-orange reveal"><i class="fa-solid fa-radio mr-2.5 text-[10px]"></i>98.3 · Transmisión actual</p>
+      <h2 class="mb-4 font-head text-[clamp(30px,4.4vw,52px)] font-bold leading-tight text-ink-1 reveal">Desde la <span class="text-orange">red</span></h2>
+      <p class="max-w-[640px] text-[19px] text-[#6b6a66] reveal">Las noticias y producciones que están viajando por las frecuencias de la RRUM.</p>
+    </header>
+
+    <div class="grid gap-6 max-md:grid-cols-1 md:grid-cols-2 lg:grid-cols-3" id="postsGrid" aria-live="polite">
+      {[0, 1, 2, 3, 4, 5].map(() => (
+        <article class="rounded-2xl bg-white ring-1 ring-linen">
+          <div class="h-40 w-full animate-pulse bg-cream-2"></div>
+          <div class="p-6">
+            <div class="mb-3 h-3 w-28 animate-pulse rounded bg-cream-2"></div>
+            <div class="mb-2 h-5 w-full animate-pulse rounded bg-cream"></div>
+            <div class="h-5 w-3/4 animate-pulse rounded bg-cream"></div>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div class="mt-10 rounded-2xl border border-linen bg-white px-7 py-8 text-center text-[#6b6a63]" id="postsError" hidden>
+      <p class="m-0 font-head text-lg text-ink-1">La señal de noticias no está disponible ahora mismo.</p>
+      <p class="m-0 mt-1 text-[15px]">El resto de la señal sigue en el aire. Intenta recargar en unos minutos.</p>
+    </div>
+
+    <div class="mt-12 flex justify-center">
+      <a class="rounded-full border border-[#d8d5cf] px-7 py-3.5 font-head text-[15px] font-medium text-ink-1 transition hover:-translate-y-0.5 hover:border-orange hover:text-orange-deep" href="https://rrum.mx" target="_blank" rel="noopener">Ver todas las noticias</a>
+    </div>
+  </div>
+</section>

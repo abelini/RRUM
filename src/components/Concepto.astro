@@ -1,0 +1,78 @@
+---
+/* 88.9 · Resonancia Colaborativa */
+---
+
+<section class="section-pad bg-ink-1" id="resonancia" data-freq="88.9" data-name="Resonancia Colaborativa">
+  <div class="container-rrum">
+    <header class="mb-14 max-w-[760px]">
+      <p class="mb-3.5 font-head text-[12.5px] font-medium uppercase tracking-[.24em] text-orange reveal"><i class="fa-solid fa-radio mr-2.5 text-[10px]"></i>88.9 · Concepto central</p>
+      <h2 class="mb-4 font-head text-[clamp(30px,4.4vw,52px)] font-bold leading-tight text-white reveal">La resonancia <span class="text-orange">no replica</span>. Amplifica.</h2>
+      <p class="max-w-[640px] text-[19px] text-cool-1 reveal">
+        Como ondas sonoras que crean interferencia constructiva, cada contenido
+        se multiplica en lugar de copiarse. Ese es el principio que nos mueve.
+      </p>
+    </header>
+
+    <!-- La ecuación del modelo (contraque teleal/naranja: interferencia constructiva) -->
+    <div class="mb-16 grid gap-6 rounded-2xl border border-teal/25 bg-gradient-to-br from-ink-2 to-[#0c2532] px-4 shadow-[0_18px_50px_rgba(47,209,194,.07)] py-10 max-md:grid-cols-1 md:[grid-template-columns:1fr_auto_auto_1.25fr] md:gap-7 md:px-11 reveal">
+      <div class="flex flex-col justify-center gap-2 border-l-[3px] border-teal pl-5">
+        <span class="font-head text-[11px] tracking-[.22em] text-teal">SEÑAL ENTRANTE</span>
+        <strong class="font-head text-[clamp(22px,2.6vw,32px)] font-bold leading-tight text-white">Tu contenido</strong>
+      </div>
+      <div class="flex flex-col items-center justify-center gap-1 px-2 text-center text-teal max-md:flex-row md:gap-1">
+        <svg viewBox="0 0 90 32" preserveAspectRatio="none" class="h-6 w-[70px] opacity-80 max-md:w-14"><path d="M0 16 Q 10 2, 20 16 T 40 16 T 60 16 T 80 16 T 90 16" fill="none" stroke="currentColor" stroke-width="2.5"/></svg>
+        <b class="font-head text-[34px]">×</b>
+        <small class="max-md:max-w-none max-md:text-left max-w-[150px] text-[12.5px] leading-snug text-cool-2">más de 40 instituciones que hacemos radio</small>
+      </div>
+      <div class="flex items-center justify-center px-2 font-head text-[34px] text-orange"><b>=</b></div>
+      <div class="flex flex-col justify-center gap-2 border-l-[3px] border-orange pl-5">
+        <span class="font-head text-[11px] tracking-[.22em] text-orange">SEÑAL RESULTANTE</span>
+        <strong class="font-head text-[clamp(22px,2.6vw,32px)] font-bold leading-tight text-orange">Impacto<br />multiplicado</strong>
+      </div>
+    </div>
+
+    <div class="mb-16 grid gap-12 md:grid-cols-2">
+      <div>
+        <h3 class="mb-5 flex items-center gap-3.5 font-head text-[clamp(19px,2.2vw,24px)] font-bold text-white">
+          <svg viewBox="0 0 24 24" class="h-[30px] w-[30px] flex-none text-orange" aria-hidden="true"><circle cx="12" cy="12" r="3" fill="currentColor"/><path d="M6 5c-3 4-3 10 0 14M18 5c3 4 3 10 0 14M9 8c-1.5 2.5-1.5 5.5 0 8M15 8c1.5 2.5 1.5 5.5 0 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          Resonamos ideas
+        </h3>
+        <ul class="check-list">
+          <li>Compartimos contenidos activamente</li>
+          <li>Intercambiamos saberes técnicos</li>
+          <li>Co-creamos narrativas universitarias</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="mb-5 flex items-center gap-3.5 font-head text-[clamp(19px,2.2vw,24px)] font-bold text-white">
+          <svg viewBox="0 0 24 24" class="h-[30px] w-[30px] flex-none text-orange" aria-hidden="true"><path d="M4 12h3l3-8 4 16 3-8h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Amplificamos el futuro
+        </h3>
+        <ul class="check-list">
+          <li>Generamos diálogo entre generaciones</li>
+          <li>Fortalecemos capacidades colectivas</li>
+          <li>Enriquecemos audiencias diversas</li>
+          <li>Preparamos nuevos comunicadores</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-16 border-t border-white/8 pt-12">
+      <p class="mb-6 font-head text-[12.5px] font-medium uppercase tracking-[.24em] text-orange reveal"><i class="fa-solid fa-radio mr-2.5 text-[10px]"></i>Nuestros valores</p>
+      <ul class="flex flex-wrap gap-3.5">
+        {[
+          ["Colaboración", "sobre competencia"],
+          ["Generosidad", "en el intercambio de conocimiento"],
+          ["Visión", "de largo plazo"],
+          ["Horizontalidad", "en relaciones entre radios"],
+          ["Impacto colectivo", "por encima del individual"],
+        ].map(([v, s]) => (
+          <li class="flex flex-col gap-0.5 rounded-xl border border-ink-line bg-ink-2 px-6 py-4 transition hover:-translate-y-0.5 hover:border-orange">
+            <strong class="font-head text-base text-white">{v}</strong>
+            <span class="text-[13px] text-cool-1">{s}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>

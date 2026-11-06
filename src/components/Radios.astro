@@ -1,0 +1,24 @@
+---
+/* 103.3 · Radios de la red — carrusel infinito (fondo blanco) */
+import { radios } from "../data/radios.js";
+---
+
+<section class="pt-24 pb-16 bg-white" id="radios" data-freq="103.3" data-name="Radios de la red">
+  <div class="container-rrum mb-10">
+    <header class="mb-0 max-w-[760px]">
+      <p class="mb-3.5 font-head text-[12.5px] font-medium uppercase tracking-[.24em] text-orange reveal"><i class="fa-solid fa-radio mr-2.5 text-[10px]"></i>103.3 · La banda completa</p>
+      <h2 class="mb-4 font-head text-[clamp(30px,4.4vw,52px)] font-bold leading-tight text-ink-1 reveal">Radios universitarias de <span class="text-orange">México</span></h2>
+      <p class="max-w-[640px] text-[19px] text-[#6b6a66] reveal">Las estaciones que integran la red: más voces, más perspectivas, más México en cada frecuencia.</p>
+    </header>
+  </div>
+
+  <div class="radio-carousel reveal max-md:[&_.radio-logo]:h-24 max-md:[&_.radio-logo]:w-24 md:[&_.radio-logo]:h-[132px] md:[&_.radio-logo]:w-[132px]" role="region" aria-label="Carrusel de radios afiliadas">
+    <div class="radio-track">
+      {[...radios, ...radios].map((r) => (
+        <a href="#" class="radio-logo rounded-[18px] border border-linen bg-[#fcfbfa] transition hover:-translate-y-1 hover:border-orange hover:shadow-[0_14px_30px_rgba(255,90,31,.13)]" title={r.name}>
+          <img src={r.img} alt={r.name} loading="lazy" />
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
