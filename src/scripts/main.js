@@ -135,10 +135,11 @@
 
   const dialScale = document.getElementById("dialScale");
   if (dialScale) {
-    for (let f = FMIN; f <= FMAX + 0.001; f += 0.2) {
+    // marcas cada 0.5 MHz (mayores en enteros) — densidad correcta en pista corta
+    for (let f10 = 879; f10 <= 1080; f10 += 5) {
       const tick = document.createElement("span");
-      if (Math.abs((f * 10) % 5) < 0.011) tick.className = "major";
-      tick.style.left = ((f - FMIN) / (FMAX - FMIN)) * 100 + "%";
+      if (f10 % 10 === 0) tick.className = "major";
+      tick.style.left = ((f10 / 10 - FMIN) / (FMAX - FMIN)) * 100 + "%";
       dialScale.appendChild(tick);
     }
   }
@@ -154,7 +155,7 @@
     return el && getComputedStyle(el).display !== "none" && el.getClientRects().length > 0;
   }
 
-  let lastFreq = 87.9, lastName = "Señal RRUM";
+  let lastFreq = 87.9, lastName = "Inicio";
 
   function tune(freq, name) {
     lastFreq = freq; lastName = name;
@@ -227,7 +228,7 @@
     sections.forEach((s) => spy.observe(s));
     tuneCurrent();
   }
-  tune(87.9, "Señal RRUM");
+  tune(87.9, "Inicio");
   // re-tune tras resize (la pista vertical cambia de altura)
   let dialResize;
   window.addEventListener("resize", () => {

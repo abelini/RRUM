@@ -86,28 +86,25 @@
 .ticker:hover .ticker-track { animation-play-state: paused; }
 
 /* ══ DIAL · pastilla compacta (SOLO <1024px; en desktop solo existe .dial-v) ══ */
-.dial-freq { font-family: 'Chakra Petch', var(--font-head); font-size: 26px; font-weight: 700; font-variant-numeric: tabular-nums; min-width: 74px; transition: color .3s; }
-.dial-freq.tuned { color: var(--color-orange); text-shadow: 0 0 18px rgb(255 90 31 / .55); }
+.dial-freq { font-family: 'Chakra Petch', var(--font-head); font-size: 26px; font-weight: 700; font-variant-numeric: tabular-nums; min-width: 64px; transition: color .3s; }
+.dial-freq.tuned { color: var(--color-teal); text-shadow: 0 0 16px rgb(47 209 194 / .5); }
 
 @media (max-width: 1023px) {
   .dial {
-    position: fixed; left: 26px; bottom: 26px; z-index: 55;
-    display: flex; align-items: center; gap: 16px;
-    padding: 12px 18px 14px;
-    background: rgb(23 23 26 / .9);
+    position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 55;
+    display: flex; align-items: center; gap: 14px;
+    padding: 12px 16px 13px;
+    background: rgb(23 23 26 / .92);
     border: 1px solid var(--color-ink-line);
-    border-radius: 999px;
+    border-radius: 10px;
     backdrop-filter: blur(10px);
     box-shadow: 0 10px 30px rgb(0 0 0 / .45);
   }
-  .dial-power { display: flex; align-items: center; gap: 6px; font-size: 10px; letter-spacing: .2em; white-space: nowrap; }
-  .dial-power i { width: 9px; height: 9px; border-radius: 50%; background: var(--color-orange); box-shadow: 0 0 10px var(--color-orange); animation: pulse-live 1.4s infinite; }
-  .dial-readout { display: flex; align-items: baseline; gap: 8px; white-space: nowrap; }
+  .dial-readout { display: flex; align-items: baseline; gap: 7px; white-space: nowrap; flex: none; }
   .dial-mhz { font-size: 10px; letter-spacing: .14em; color: var(--color-cool-1); }
-  .dial-name { font-size: 12px; font-weight: 500; color: var(--color-cool-2); border-left: 1px solid var(--color-ink-line); padding-left: 10px; }
   .dial-track {
-    position: relative; width: 190px; height: 30px;
-    border-radius: 8px; overflow: hidden;
+    position: relative; flex: 1; min-width: 70px; height: 30px;
+    border-radius: 6px; overflow: hidden;
     background: linear-gradient(180deg, #131316, #1b1b1f);
     border: 1px solid var(--color-ink-line);
   }
@@ -169,11 +166,6 @@
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s cubic-bezier(.22, .8, .36, 1); }
 .reveal.in { opacity: 1; transform: none; }
 
-@media (max-width: 840px) {
-  .dial { left: 16px; right: 16px; bottom: 16px; justify-content: space-between; padding: 10px 16px; }
-  .dial-track { display: none; }
-  .dial-power span { display: none; }
-}
 @media (max-width: 1023px) {
   /* Nav móvil: se despliega al togglear .open (JS) */
   #mainNav {
