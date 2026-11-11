@@ -2,7 +2,7 @@
 /* Hero: pantalla completa, waves reactivas al cursor (main.js) */
 ---
 
-<section class="relative flex min-h-svh flex-col justify-center overflow-hidden bg-ink-0 px-0 pt-[116px] pb-16" id="inicio" data-freq="87.9" data-name="Señal RRUM">
+<section class="relative flex min-h-svh flex-col justify-center overflow-hidden bg-ink-0 px-0 pt-[116px] pb-16" id="inicio" data-freq="87.9" data-name="Inicio">
   <canvas class="absolute inset-0 z-0 h-full w-full opacity-90" id="heroCanvas" aria-hidden="true"></canvas>
   <div class="hero-grid-lines" aria-hidden="true"></div>
 
@@ -36,8 +36,8 @@
     </svg>
   </div>
 
-  <!-- Franja de metadatos -->
-  <div class="relative z-[2] mt-14">
+  <!-- Franja de metadatos (desktop/tablet; en móvil se quita) -->
+  <div class="relative z-[2] mt-14 max-md:hidden">
     <div class="container-rrum flex flex-wrap items-center gap-9 border-t border-white/8 pt-5 pb-5 font-head text-[12.5px] tracking-[.16em] text-cool-1">
       <span class="inline-flex items-center gap-2 text-teal">
         <i class="inline-block h-2 w-2 rounded-full bg-teal"></i>RED · 41 ESTACIONES
